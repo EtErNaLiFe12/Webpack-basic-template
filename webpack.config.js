@@ -1,6 +1,6 @@
 // webpack의 구성옵션 - nodeJS 환경에서 동작함
 //import
-const path = require('path') // path라는 전역 모듈을 가져옴
+const path = require('path') // path 전역 모듈을 가져옴
 const HtmlPlugin = require('html-webpack-plugin') //  html 파일 읽어와서 개발서버 오픈
 const CopyPlugin = require('copy-webpack-plugin') // 정적 파일 dist(변환 폴더)로 가져오기 - css 파일을 만약 static 폴더에 넣어놓으면 자동으로 dist로 가져올수 있다.
 
@@ -11,7 +11,7 @@ module.exports = {
 
   // 결과물(번들)을 반환하는 설정
   output: {
-    // path: path.resolve(__dirname, 'dist'), // __dirname은 현재파일에 있는 경로를 지칭함. / resolve 메소드로 첫번째 인수와 두번째 인수의 경로를 합쳐줌. 
+    // path: path.resolve(__dirname, 'dist'), // __dirname은 현재파일에 있는 경로를 지칭함. / resolve 메소드는 첫번째 인수와 두번째 인수의 경로를 합쳐줌.
     // filename: 'main.js',
     clean: true // 지정한 파일 외에 지워줌
   },
@@ -47,6 +47,7 @@ module.exports = {
       ]
     })
   ],
+  
   devServer: { // 개발 서버 오픈시 설정해주는것
     host: 'localhost'
   } 
